@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+    <style>
+
+
+/* SELETORES PERSONALIZADOS   
+
+# = id
+. = class
+: = pseudoclass
+:: = pseudoelements
+> = children
+
+*/
+
+
+
+        body{
+            font-size: 1.5em;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+
+        }
+
+        a:hover {
+            color:black;
+           text-decoration: underline;
+        }
+
+        a::before {
+            content: '>>>....';
+        }
+
+        a::after {
+            content: '[link]';
+            color: darkgray;
+        }
+
+        a.especial::before {
+
+            content: '** ';
+        }
+
+
+        a.especial::after {
+
+content: '** ';
+}
+    </style>
+
+
+
+</head>
+<body>
+    <h1>Personalizando</h1>
+    <ul>
+        <li><a href="https://www.globo.com" class="especial">Site Globo</a></li>
+
+        <li><a href="https://www.YouTube.com" class="especial">Site YouTube</a></li>
+
+        <li><a href="https://www.Metallica.com">Site Metallica</a></li>
+
+    </ul>
+    
+</body>
+</html>
