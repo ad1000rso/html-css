@@ -9,16 +9,18 @@
 
     <h1>Teste de Formulário</h1>
 
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post" autocomplete="on">
 
     <p>
-        <label for="iusu">Usuário</label>
-        <input type="text" name="usu" id="iusu">
-    </p>
+        <label for="iusu">User</label>
+        <input type="text" name="usu" id="iusu" required minlength="5" maxlength="6" size="20" placeholder="nome usuário"
+        autocomplete="username">
+    </p> 
 
     <p>
         <label for="isen">Senha</label>
-        <input type="password" name="sen" id="isen">
+        <input type="password" name="sen" id="isen" required autocomplete="current-password"
+        minlength="3" maxlength="5" placeholder="8 caracteres">
     </p>
 
     <p>
