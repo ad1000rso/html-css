@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbox e Rádio</title>
+
+<STYLE>
+    BODY{
+        background-color: gray;
+    }
+</STYLE>
+
 </head>
 <body>
     <h1>Exemplos de formulários</h1>
 <form action="cadastro.php" method="get" autocomplete="on">
 
     <fieldset>
+
+        <legend>SEXO</legend>
+        <input type="radio" name="sexo" id="isexmas" value="M">Masculino<label for="isexmas"></label>
+        <br>
+        <input type="radio" name="sexo" id="isexfem" value="F">Feminino<label for="isexmas"></label>
+
+
+    </fieldset>
+
+    <fieldset>
         <legend>Esportes Favoritos</legend>
 
-        <input type="checkbox" name="efut" id="ifut">  <label for="ifut">Futebol</label>
-        <input type="checkbox" name="enat" id="inat">  <label for="inat">Natação</label>
-        <input type="checkbox" name="ebas" id="ibas">  <label for="ibas">Basquete</label>
-        <input type="checkbox" name="eten" id="iten">  <label for="">Tênis</label>
+        <input type="checkbox" name="efut" id="ifut">  <label for="ifut">Futebol</label><br>
+        <input type="checkbox" name="enat" id="inat">  <label for="inat">Natação</label><br>
+        <input type="checkbox" name="ebas" id="ibas">  <label for="ibas">Basquete</label><br>
+        <input type="checkbox" name="eten" id="iten">  <label for="">Tênis</label><br>
 
     </fieldset>
 
