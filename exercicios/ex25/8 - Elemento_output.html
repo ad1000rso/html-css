@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de formulário</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+    </style>
+
+
+</head>
+<body>
+ 
+<h1>Exemplos de formulários</h1>
+
+<fieldset>
+    <legend>CAMPO 1: </legend>
+    <form action="cadastro.php" method="get" autocomplete="on">
+    
+    <P>
+        <label for="in1"> Número 1: </label>
+        <input type="number" name="in1" id="in1" min="1" max="10" required
+        oninput="isoma.innerHTML = Number(in1.value) + Number(ind2.value)">
+    </P>
+    
+    <p>
+        <label for="in2">Número 2: </label>
+        <input type="number" name="ind2" id="in2" min="1" max="10" required
+        oninput="isoma.innerHTML = Number(in1.value) + Number(ind2.value)"
+        >
+    
+    </p>
+    
+    <p>
+        <label for="isoma">Soma: </label>
+        <output name="soma" id="isoma">0
+        </output>
+    </p>
+    
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Resetar">
+    </p>
+    
+    </form>
+</fieldset>
+
+<br>
+
+<fieldset>
+    <legend>campo 2 - Exemplo Range Soma</legend>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+<p>
+    <label for="inum">Número</label>
+    <input type="range"  id="inum" min="0" max="10"
+    oninput="ival.innerHTML = Number(inum.value)">
+    <output id="ival">10</output>
+</p>
+
+
+    </form>
+</fieldset>
+<br>
+
+<fieldset>
+    <legend>Output : Qual sua idade?</legend>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <p>
+            <label for="iano">Em que ano você nasceu? </label>
+            <input type="number" id="iano" min="1987" max="2020"
+            oninput="Funcao_idade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é: </label>
+            <output type="number" id="iidade" min="1" max="90">0</output>
+        </p>
+
+    </form>
+
+    <script>
+        function Funcao_idade() {
+            let atual = new Date().getFullYear() 
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+
+    </script>
+
+
+
+</fieldset>
+
+</body>
+</html>
