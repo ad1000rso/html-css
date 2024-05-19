@@ -1,7 +1,146 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 /* todas demais mídias */
 
-@media screen {
-    
+
+/* typical devices Breakpoints 
+PEQUENAS TELAS
+Celular: 600px a 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes Telas: acima de 1200px
+*/
+
+/* IMPRESSORAS*/
+
+@media print {
+
+    main {
+        border: 3px;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: red;
+    }
+
+    main::after {
+        content: 'IMPRESSÃO DO CURSO EM VÍDEO';
+        text-decoration: overline;
+    }
+
+    img#phone {
+        display: NONE;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: block;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+
+
+
+/* TABLET*/
+
+@media screen and (min-width:768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {
+        display: NONE;
+    }
+
+    img#tablet {
+        display: BLOCK;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    BODY {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {
+        display: NONE;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+
+}
+
+/* GRANDES TELAS */
+
+@media screen and (min-width: 1200px) {
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+
+    }
+
+    main {
+        width: 10px;
+    }
+
+    img#phone {
+        display: NONE;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
+    }
 }
